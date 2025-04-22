@@ -15,7 +15,7 @@ source_list = [
 ]
 
 today = datetime.datetime.now(datetime.timezone.utc)
-html_file = "output/index.html"
+html_file = "index.html"
 all_articles = []
 url = "https://newsapi.org/v2/top-headlines"
 
@@ -57,7 +57,7 @@ for source in source_list:
         print(f"Error fetching from {source}: {e}")
         continue
 
-# Write HTML output
+# Write HTML put
 with open(html_file, "w", encoding="utf-8") as file:
     file.write(f"<h1> Most Recent News for {today.date()}</h1>\n<ul>\n")
 
