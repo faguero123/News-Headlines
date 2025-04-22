@@ -1,2 +1,2 @@
 # News-Headlines
-# Hello Fernanda
+This is our final project.
