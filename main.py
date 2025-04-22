@@ -62,7 +62,8 @@ with open(html_file, "w", encoding="utf-8") as file:
     file.write(f"<h1> Most Recent News for {today.date()}</h1>\n<ul>\n")
 
     for article in all_articles:
-        file.write("<li>")
+        sentiment = article['sentiment_label'].lower()  # 'positive', 'neutral', 'negative'
+        file.write(f"<li data-sentiment='{sentiment}'>")
         file.write(f"<strong>{article['source']}</strong>: ")
         file.write(f"<a href='{article['url']}'>{article['title']}</a><br>")
         file.write(f"<em>Sentiment:</em> {article['sentiment_label']} ({article['sentiment_score']:.3f})")
