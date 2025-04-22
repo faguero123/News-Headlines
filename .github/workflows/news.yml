@@ -1,0 +1,39 @@
+name: Daily News Sentiment
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Every hour
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages  # assumes output lives on gh-pages branch
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests nltk
+          python -c "import nltk; nltk.download('vader_lexicon')"
+
+      - name: Run script
+        run: python main.py  # should write to output/index.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add index.html
+          git status
+          git commit -m "Hourly update" || echo "No changes"
+          git push origin gh-pages
