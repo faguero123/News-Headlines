@@ -28,15 +28,12 @@ jobs:
           python -c "import nltk; nltk.download('vader_lexicon')"
 
       - name: Run script
-        run: python main.py  # or whatever your script is called
+        run: python main.py  # make sure this writes index.html to the repo root
 
-      - name: Copy output to gh-pages branch
+      - name: Commit updated index.html
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git fetch origin gh-pages
-          git switch gh-pages
-          git restore --source=main index.html  # if your script now writes to index.html
           git add index.html
           git commit -m "Update dashboard" || echo "No changes"
-          git push origin gh-pages
+          git push origin main
