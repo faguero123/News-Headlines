@@ -82,7 +82,7 @@ with open(html_file, "w", encoding="utf-8") as file:
   </style>
 </head>
 <body>
-  <h1> Most Recent News for {today.date()}</h1>
+  <h1> Most Recent News</h1>
   <label for="sentiment-filter">Filter by Sentiment:</label>
   <select id="sentiment-filter" onchange="filterSentiment()">
     <option value="all">All</option>
