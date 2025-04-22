@@ -1,19 +1,72 @@
-<h1> Most Recent News for 2025-04-22</h1>
-<ul>
-<li><strong>CNN</strong>: <a href='https://www.cnn.com/2025/04/20/sport/nico-iamaleava-ucla-tennessee-transfer-portal-spt/index.html'>Nico Iamaleava commits to UCLA amid transfer portal drama with Tennessee</a><br><em>Sentiment:</em> Neutral (0.026)</li>
-<li><strong>BBC News</strong>: <a href='https://www.bbc.co.uk/news/articles/cm25lz56rezo'>Santorini volcano probed for clues about next big explosion</a><br><em>Sentiment:</em> Neutral (0.000)</li>
-<li><strong>The Verge</strong>: <a href='http://www.theverge.com/installer-newsletter/652291/blue-prince-great-circle-baldurs-gate-games-installer'>Everybody’s got a favorite new game</a><br><em>Sentiment:</em> Positive (0.459)</li>
-<li><strong>The Washington Post</strong>: <a href='https://www.washingtonpost.com/politics/2025/04/20/trump-biden-sensitive-documents-shared/'>Sensitive documents, including White House floor plans, improperly shared with thousands</a><br><em>Sentiment:</em> Positive (0.340)</li>
-<li><strong>NBC News</strong>: <a href='https://www.nbcnews.com/news/us-news/weekend-rundown-april-20-rcna201856'>ICE deportations get caught in a legal fight and an Easter ceasefire is tested: Weekend Rundown</a><br><em>Sentiment:</em> Negative (-0.273)</li>
-<li><strong>CBS News</strong>: <a href='https://www.cbsnews.com/video/bird-flu-concerns-60-minutes-video-2025-04-20/'>Scientists warn what future bird flu mutations could mean for people | 60 Minutes</a><br><em>Sentiment:</em> Negative (-0.459)</li>
-<li><strong>ABC News</strong>: <a href='https://abcnews.go.com/US/wireStory/harvard-students-told-shelter-place-police-investigate-shots-120995546'>Harvard students told to shelter in place after shots fired at nearby subway stop</a><br><em>Sentiment:</em> Negative (-0.700)</li>
-<li><strong>Fox News</strong>: <a href='https://www.foxnews.com/politics/david-hogg-donates-100k-dccc-after-plan-primary-ineffective-democrats-ignited-civil-war-party'>David Hogg donates $100K to DCCC after plan to primary 'ineffective' Democrats ignited civil war in party</a><br><em>Sentiment:</em> Negative (-0.296)</li>
-<li><strong>Bloomberg</strong>: <a href='https://www.bloomberg.com/news/articles/2025-04-21/tesla-bull-calls-code-red-saying-musk-needs-to-leave-doge'>Tesla Bull Calls ‘Code Red’ Saying Musk Needs to Leave DOGE</a><br><em>Sentiment:</em> Negative (-0.052)</li>
-<li><strong>Al Jazeera English</strong>: <a href='https://www.aljazeera.com/news/liveblog/2025/4/21/live-israel-kills-32-in-gaza-2-in-lebanon-us-bombs-yemen-killing-12'>LIVE: Israel kills 32 in Gaza, two in Lebanon; US bombs Yemen, killing 12</a><br><em>Sentiment:</em> Negative (-0.836)</li>
-<li><strong>Axios</strong>: <a href='https://www.axios.com/2023/07/13/birth-control-prescribed-pharmacists'>Over-the-counter birth control is a post-Roe "game-changer"</a><br><em>Sentiment:</em> Neutral (0.000)</li>
-<li><strong>Fortune</strong>: <a href='https://fortune.com/2022/06/01/former-softbank-partner-tackling-mid-career-drop-off-for-working-mothers/'>Why a former SoftBank partner is tackling mid-career drop-off for working mothers</a><br><em>Sentiment:</em> Neutral (0.000)</li>
-<li><strong>MSNBC</strong>: <a href='https://www.msnbc.com/jonathan-capehart/watch/former-onerepublic-bassist-announces-bid-for-congress-237953093677'>Former OneRepublic bassist announces bid for Congress</a><br><em>Sentiment:</em> Neutral (0.000)</li>
-<li><strong>National Geographic</strong>: <a href='https://www.nationalgeographic.com/history/2021/02/3-ton-parts-stonehenge-may-carried-from-earlier-monuments.html'>3-ton parts of Stonehenge may have been carried from earlier monuments</a><br><em>Sentiment:</em> Neutral (0.000)</li>
-<li><strong>Politico</strong>: <a href='https://www.politico.com/news/2025/04/19/anti-trump-protesters-new-york-washington-00299718'>Anti-Trump protesters turn out to rallies in New York, Washington and other cities across country</a><br><em>Sentiment:</em> Negative (-0.226)</li>
-<li><strong>Time</strong>: <a href='http://time.com/7278903/harvard-teaches-leaders-valuable-lesson/'>Harvard Teaches U.S. Leaders a Valuable Lesson</a><br><em>Sentiment:</em> Positive (0.477)</li>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Most Recent News for 2025-04-22</title>
+   <style>
+    #sentiment-filter {
+      margin-bottom: 1em;
+      font-size: 1em;
+    }
+
+    li[data-sentiment="negative"] {
+      color: crimson;
+    }
+
+    li[data-sentiment="positive"] {
+      color: darkgreen;
+    }
+
+    li[data-sentiment="neutral"] {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1> Most Recent News for 2025-04-22</h1>
+  <label for="sentiment-filter">Filter by Sentiment:</label>
+  <select id="sentiment-filter" onchange="filterSentiment()">
+    <option value="all">All</option>
+    <option value="positive-neutral">Positive/Neutral</option>
+    <option value="negative">Negative</option>
+  </select>
+
+  <ul>
+<li data-sentiment='neutral'><strong>CNN</strong>: <a href='https://www.cnn.com/2025/04/20/sport/nico-iamaleava-ucla-tennessee-transfer-portal-spt/index.html'>Nico Iamaleava commits to UCLA amid transfer portal drama with Tennessee</a><br><em>Sentiment:</em> Neutral (0.026)</li>
+<li data-sentiment='neutral'><strong>BBC News</strong>: <a href='https://www.bbc.co.uk/news/articles/cm25lz56rezo'>Santorini volcano probed for clues about next big explosion</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='positive'><strong>The Verge</strong>: <a href='http://www.theverge.com/installer-newsletter/652291/blue-prince-great-circle-baldurs-gate-games-installer'>Everybody’s got a favorite new game</a><br><em>Sentiment:</em> Positive (0.459)</li>
+<li data-sentiment='positive'><strong>The Washington Post</strong>: <a href='https://www.washingtonpost.com/politics/2025/04/20/trump-biden-sensitive-documents-shared/'>Sensitive documents, including White House floor plans, improperly shared with thousands</a><br><em>Sentiment:</em> Positive (0.340)</li>
+<li data-sentiment='negative'><strong>NBC News</strong>: <a href='https://www.nbcnews.com/news/us-news/weekend-rundown-april-20-rcna201856'>ICE deportations get caught in a legal fight and an Easter ceasefire is tested: Weekend Rundown</a><br><em>Sentiment:</em> Negative (-0.273)</li>
+<li data-sentiment='neutral'><strong>CBS News</strong>: <a href='https://www.cbsnews.com/video/041625-cbs-evening-news-plus/'>4/16: CBS Evening News Plus</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='negative'><strong>ABC News</strong>: <a href='https://abcnews.go.com/US/wireStory/harvard-students-told-shelter-place-police-investigate-shots-120995546'>Harvard students told to shelter in place after shots fired at nearby subway stop</a><br><em>Sentiment:</em> Negative (-0.700)</li>
+<li data-sentiment='positive'><strong>Fox News</strong>: <a href='https://www.foxnews.com/politics/trump-hopeful-russia-ukraine-can-make-deal-after-temporary-easter-ceasefire-ends'>Trump hopeful Russia and Ukraine can make a deal after temporary Easter ceasefire ends</a><br><em>Sentiment:</em> Positive (0.511)</li>
+<li data-sentiment='negative'><strong>Bloomberg</strong>: <a href='https://www.bloomberg.com/news/articles/2025-04-21/tesla-bull-calls-code-red-saying-musk-needs-to-leave-doge'>Tesla Bull Calls ‘Code Red’ Saying Musk Needs to Leave DOGE</a><br><em>Sentiment:</em> Negative (-0.052)</li>
+<li data-sentiment='negative'><strong>Al Jazeera English</strong>: <a href='https://www.aljazeera.com/news/liveblog/2025/4/21/live-israel-kills-32-in-gaza-2-in-lebanon-us-bombs-yemen-killing-12'>LIVE: Israel kills 32 in Gaza, two in Lebanon; US bombs Yemen, killing 12</a><br><em>Sentiment:</em> Negative (-0.836)</li>
+<li data-sentiment='neutral'><strong>Axios</strong>: <a href='https://www.axios.com/2023/07/13/birth-control-prescribed-pharmacists'>Over-the-counter birth control is a post-Roe "game-changer"</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='neutral'><strong>Fortune</strong>: <a href='https://fortune.com/2022/06/01/former-softbank-partner-tackling-mid-career-drop-off-for-working-mothers/'>Why a former SoftBank partner is tackling mid-career drop-off for working mothers</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='neutral'><strong>MSNBC</strong>: <a href='https://www.msnbc.com/jonathan-capehart/watch/former-onerepublic-bassist-announces-bid-for-congress-237953093677'>Former OneRepublic bassist announces bid for Congress</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='neutral'><strong>National Geographic</strong>: <a href='https://www.nationalgeographic.com/history/2021/02/3-ton-parts-stonehenge-may-carried-from-earlier-monuments.html'>3-ton parts of Stonehenge may have been carried from earlier monuments</a><br><em>Sentiment:</em> Neutral (0.000)</li>
+<li data-sentiment='negative'><strong>Politico</strong>: <a href='https://www.politico.com/news/2025/04/19/anti-trump-protesters-new-york-washington-00299718'>Anti-Trump protesters turn out to rallies in New York, Washington and other cities across country</a><br><em>Sentiment:</em> Negative (-0.226)</li>
+<li data-sentiment='positive'><strong>Time</strong>: <a href='http://time.com/7278903/harvard-teaches-leaders-valuable-lesson/'>Harvard Teaches U.S. Leaders a Valuable Lesson</a><br><em>Sentiment:</em> Positive (0.477)</li>
 </ul>
+  <p><em>Last updated: 2025-04-22 01:03 UTC</em></p>
+
+  <script>
+    function filterSentiment() {
+      const filter = document.getElementById("sentiment-filter").value;
+      const items = document.querySelectorAll("li[data-sentiment]");
+      items.forEach(item => {
+        const sentiment = item.getAttribute("data-sentiment");
+        const isPosOrNeutral = sentiment === "positive" || sentiment === "neutral";
+        if (filter === "all") {
+          item.style.display = "list-item";
+        } else if (filter === "positive-neutral") {
+          item.style.display = isPosOrNeutral ? "list-item" : "none";
+        } else if (filter === "negative") {
+          item.style.display = sentiment === "negative" ? "list-item" : "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
